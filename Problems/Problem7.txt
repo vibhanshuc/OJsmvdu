@@ -1,0 +1,7 @@
+﻿Write a program to find the minimum of 3  numbers.
+
+Problem statement: Find the min of three num
+
+constraints:
+
+Output : single digit

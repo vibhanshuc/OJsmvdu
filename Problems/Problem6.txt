@@ -1,0 +1,1 @@
+Write a program to find the minimum of 3  numbers.

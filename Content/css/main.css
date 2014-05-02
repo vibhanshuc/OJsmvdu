@@ -1,0 +1,23 @@
+﻿#frame_left
+{
+    position:absolute;
+    top:100px;
+    left:100px;
+    bottom:0px;
+    right:0px;
+    width:215px;
+   
+    overflow:hidden;
+    /*background:#eee;*/
+    color:Black;
+}
+#main
+{
+    position:fixed;
+    top:100px;
+    left:360px;
+    right:0px;
+    bottom:25px;
+    overflow:auto;
+    padding-right:100px;
+}
