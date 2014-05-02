@@ -51,7 +51,7 @@ public partial class CodeLine : System.Web.UI.Page
         
 
         Dictionary<string, string> result = new Dictionary<string, string>();
-        Object[] ret = client.createSubmission("vibhanshu86", "*Glorious#2", TextBox1.Text, int.Parse(ddlLanguage.SelectedValue.ToString()), "", true, true);
+        Object[] ret = client.createSubmission("IDEONEUSERNAME", "IDEONEPASSWORD", TextBox1.Text, int.Parse(ddlLanguage.SelectedValue.ToString()), "", true, true);
 
         // filling result with data returned by testFunction
         foreach (object o in ret)
@@ -89,7 +89,7 @@ public partial class CodeLine : System.Web.UI.Page
     {
         //Get the result of submission
         Dictionary<string, string> oresult = new Dictionary<string, string>();
-        Object[] sresult = client.getSubmissionDetails("vibhanshu86", "*Glorious#2", Label1.Text, true, true, true, true, true);
+        Object[] sresult = client.getSubmissionDetails("IDEONEUSERNAME", "IDEONEPASSWORD", Label1.Text, true, true, true, true, true);
         foreach (object o in sresult)
         {
             if (o is XmlElement)
