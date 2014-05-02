@@ -1,0 +1,38 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+public partial class MasterPage2 : System.Web.UI.MasterPage
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        Button1.Visible = false;
+        try
+        {
+            String temp = "";
+            temp = (String)Session["var_session"].ToString();
+            if (temp != null)
+            {
+                Label_session.Text = "Welcome" + " " + temp.ToString();
+                Button1.Visible = true;
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex);
+        }
+    }
+    protected void Menu1_MenuItemClick(object sender, MenuEventArgs e)
+    {
+
+    }
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        Session["var_session"] = null;
+        Button1.Visible = false;
+        Label_session.Text = " ";
+    }
+}

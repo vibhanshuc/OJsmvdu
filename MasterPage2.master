@@ -1,0 +1,111 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage2.master.cs" Inherits="MasterPage2" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <link href="Content/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="Content/css/main.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+     <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="Default.aspx" style="font-size:25px"><strong> Online Judge </strong></a>
+        <div class="nav-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="Default.aspx">Home</a></li>
+            <li><a href="contest.aspx">Contests</a></li>
+            <li><a href="leaderboard.aspx">Leaderboard</a></li>
+            <li class="dropdown">
+            <a href="algorithm.aspx" class="dropdown-toggle" data-toggle="dropdown">
+               Problems <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+               <li><a href="algorithm.aspx">Algorithms</a></li>
+               <li><a href="numbertheory.aspx">Numbers Theory</a></li>
+               <li><a href="stringgame.aspx">Strings Game</a></li>
+               <li class="divider"></li>
+               <li><a href="basicproblem1.aspx">Basics Problems 1</a></li>
+               <li class="divider"></li>
+               <li><a href="basicproblem2.aspx">Basic Problems 2</a></li>
+            </ul>
+         </li>
+            <li><a href="contact.aspx">Contact</a></li>
+            <li><a href="CodeLine.aspx">Editor</a></li>
+            <li><a href="about_us.aspx">About Us</a></li>
+          </ul>
+          <ul class="nav navbar-nav" style="float: right">
+            <li><a href="signup.aspx">SignUp</a></li>
+            <li><a href="signin.aspx">SignIn</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+    <form id="form1" runat="server">
+    <asp:Label ID="Label_session" runat="server" 
+         style="position:absolute; top: 54px; left: 1000px; width: 165px;" ></asp:Label>
+         <asp:Button ID="Button1" runat="server" CssClass="btn btn-info" 
+                Text="Sign Out"  
+                
+        style="position:absolute; height:33px; width:77px; right:60px; top:54px;" 
+        onclick="Button1_Click" />
+        <div id="frame_left">
+   
+        
+       <asp:Menu ID="Menu1" runat="server" BackColor="#FFFBD6" 
+           DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="1.5em" 
+           ForeColor="#990000" StaticSubMenuIndent="10px" style="width:230px;" 
+                onmenuitemclick="Menu1_MenuItemClick">
+           <DynamicHoverStyle BackColor="#990000" ForeColor="White" />
+           <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+           <DynamicMenuStyle BackColor="#FFFBD6" />
+           <DynamicSelectedStyle BackColor="white" />
+           <Items>
+               <asp:MenuItem Text="Algorithms" Value="Algorithms" NavigateUrl="~/algorithm.aspx"></asp:MenuItem>
+               <asp:MenuItem Text="Number Theory" Value="Number Theory" NavigateUrl="~/numbertheory.aspx"></asp:MenuItem>
+               <asp:MenuItem Text="String Game" Value="String Game" NavigateUrl="~/stringgame.aspx"></asp:MenuItem>
+               <asp:MenuItem Text="Basic Problems 1" Value="Basic Problems 1" NavigateUrl="~/basicproblem1.aspx"></asp:MenuItem>
+               <asp:MenuItem Text="Basic Problems 2" Value="Basic Problems 2" NavigateUrl="~/basicproblem2.aspx"></asp:MenuItem>
+           </Items>
+           <StaticHoverStyle BackColor="#990000" ForeColor="White" />
+           <StaticMenuItemStyle HorizontalPadding="16px" VerticalPadding="12px" />
+           <StaticSelectedStyle BackColor="#FFCC66" />
+       </asp:Menu>
+        
+   </div>
+
+        <asp:Label runat="server" ID="Label2" Text="All copyrights reserved." 
+                style="position:absolute; bottom: 10px; left: 100px;" />
+           <asp:LinkButton runat="server" ID="LinkButton1" Text="Home" 
+                style="position:absolute; bottom: 10px; left: 850px;" 
+                PostBackUrl="~/Default.aspx"></asp:LinkButton>
+           <asp:LinkButton runat="server" ID="LinkButton2" Text="Leaderboard" style="position:absolute; bottom: 10px; left: 910px;" PostBackUrl="~/leaderboard.aspx" ></asp:LinkButton>
+           <asp:LinkButton runat="server" ID="LinkButton3" Text="Contests" style="position:absolute; bottom: 10px; left: 1010px;" PostBackUrl="~/contest.aspx"></asp:LinkButton>
+           <asp:LinkButton runat="server" ID="LinkButton4" Text="Problems" style="position:absolute; bottom: 10px; left: 1080px;" PostBackUrl="~/algorithm.aspx"></asp:LinkButton>
+           <asp:LinkButton runat="server" ID="LinkButton5" Text="Contact"  
+               style="position:absolute; bottom: 10px; left: 1150px;" 
+            PostBackUrl="~/contact.aspx" ></asp:LinkButton>
+               
+    </form>
+    
+    <div class="container">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    <script src="Scripts/jquery-2.0.3.min.js" type="text/javascript"></script>
+    <script src="Scripts/bootstrap.min.js" type="text/javascript"></script>
+</body>
+</html>
