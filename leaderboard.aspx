@@ -32,6 +32,7 @@
         <Columns>
             <asp:BoundField DataField="user_name" HeaderText="User" SortExpression="user_name" />
             <asp:BoundField DataField="prob_solved" HeaderText="Score" SortExpression="prob_solved" />
+            <asp:BoundField DataField="prob_attempted" HeaderText="Problems Attempted" SortExpression="prob_attempted" />
         </Columns>
     </asp:GridView>
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:aspnetdbConnectionString2 %>" SelectCommand="SELECT * FROM [leaderboard] ORDER BY [prob_solved]"></asp:SqlDataSource>
