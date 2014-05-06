@@ -128,7 +128,7 @@ public partial class CodeLine : System.Web.UI.Page
         mycomm.Connection = conn;
         
 
-        sqlstr = ("update leaderboard set prob_solved=prob_solved + 1 where user_name=@temp" );
+        sqlstr = ("update leaderboard set prob_solved=prob_solved + 1,prob_attempted=prob_attempted + 1 where user_name=@temp" );
        
         mycomm.CommandText=sqlstr;
         mycomm.Parameters.AddWithValue("@temp", temp);
@@ -146,10 +146,10 @@ public partial class CodeLine : System.Web.UI.Page
           
             if (temp != null)
             {
-               int count1,count2;
+               
                 if ( sol_user== 5)
                        {
-                            Label3.Text="successful";
+                            Label3.Text="successful submission";
                        }
                 
             
